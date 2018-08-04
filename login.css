@@ -1,0 +1,219 @@
+@font-face {
+    font-family: "Segoe UI";
+    src: url('../fonts/segoeui.ttf');
+}
+
+* {
+    font-family: "Segoe UI", sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    height: 100%;
+}
+
+.bg {
+    background: linear-gradient(45deg, #1e130c, #9a8478);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 100%;
+    max-width: 350px;
+    min-height: 400px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaa;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .5);
+    padding: 75px 0 20px;
+}
+
+form > h1 {
+    padding: 10px 23px 0;
+    font-size: 1.3em;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    transition: all .25s ease;
+    margin-bottom: 0px;
+}
+
+form > time {
+    padding: 0 25px 25px;
+    font-size: 10pt;
+    display: block;
+}
+
+form:hover > h1 {
+    color: #c5ddf4;
+}
+
+form > fieldset {
+    background: #2F303A;
+    border-top: 1px solid #141519;
+    border-bottom: 1px solid #353640;
+    border-left: 0;
+    border-right: 0;
+    padding: 15px 23px;
+    position: relative;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, .2);
+    margin: 0;
+}
+
+form > fieldset > input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #b0b6cb;
+    font-size: 12pt;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    padding: 10px 10px 10px 50px;
+    transition: all .25s ease;
+}
+
+form > fieldset > input:focus {
+    color: #c5ddf4;
+    outline: none;
+}
+
+form > fieldset > input + i.fa {
+    transition: all .25s ease;
+}
+
+form > fieldset > input:focus + i.fa {
+    color: #c5ddf4;
+}
+
+form > fieldset > input::-webkit-input-placeholder {
+    color: #606270;
+    transition: all .25s ease;
+}
+
+form > fieldset > input::-moz-placeholder {
+    color: #606270;
+    transition: all .25s ease;
+}
+
+form > fieldset > input:focus::-webkit-input-placeholder {
+    color: #c5ddf4;
+}
+
+form > fieldset > input:focus::-moz-placeholder {
+    color: #c5ddf4;
+}
+
+form > button {
+    margin: 0 23px;
+    padding: 8px 40px;
+    background: rgba(205, 229, 252, 0);
+    color: #bcc2d6;
+    border: 2px solid #62636F;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all .25s ease;
+    cursor: pointer;
+}
+
+form > button:hover,
+form > button:focus {
+    color: #676b7d;
+    border: 2px solid #bcc2d6;
+    background: #cde5fc;
+    outline: none;
+}
+
+form > div {
+    padding: 14px 23px;
+}
+
+form > div > label {
+    position: relative;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form > div > input[type=checkbox] {
+    position: relative;
+    z-index: 1;
+    width: 17px;
+    height: 17px;
+    top: 4px;
+    opacity: 0;
+}
+
+form > div > label::before {
+    border-radius: 2px;
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: -24px;
+    width: 17px;
+    height: 17px;
+    background: #575867;
+    transition: all .25s ease;
+}
+
+form > div > label::after {
+    position: absolute;
+    content: '';
+    top: 1px;
+    left: -20px;
+    width: 5px;
+    height: 9px;
+    border-bottom: 5px solid rgba(169, 170, 199, 0);
+    border-right: 5px solid rgba(169, 170, 199, 0);
+    transform: rotate(40deg);
+    transition: all .25s ease;
+}
+
+form > div > input[type=checkbox]:focus + label,
+form > div > label:hover {
+    color: #c5ddf4;
+}
+
+form > div > input[type=checkbox]:focus + label::before,
+form > div > input[type=checkbox]:checked + label::before,
+form > div > label:hover::before {
+    background: #7c7d91;
+}
+
+form > div > input:checked + label::after {
+    border-bottom: 5px solid #cde5fc;
+    border-right: 5px solid #cde5fc;
+}
+
+form > #errorMessage {
+    color: #CC4F57;
+    padding: 25px;
+    font-weight: bold;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
